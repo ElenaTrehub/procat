@@ -1,0 +1,47 @@
+<div *screenLarge class="head-line">
+  <div class="head-line__container">
+    <div class="logo">
+      <img class="logo__img" src="../../../assets/images/logo.jpg">
+      <div class="logo__content">
+        <span class="logo__name">Автопрокат</span>
+        <span class="logo__info">КиевПрокатСервис</span>
+      </div>
+    </div>
+    <app-menu></app-menu>
+    <div class="contact">
+      <p class="contact__phone">+380956389541</p>
+      <p class="contact__email">123procat@gmail.com</p>
+    </div>
+  </div>
+
+</div>
+<div *screenMiddle class="head-line-middle">
+  <div class="head-line__middle">
+    <div class="logo">
+      <img class="logo__img" src="../../../assets/images/logo.jpg">
+      <div class="logo__content">
+        <span class="logo__name">Автопрокат</span>
+        <span class="logo__info">КиевПрокатСервис</span>
+      </div>
+    </div>
+    <app-menu></app-menu>
+  </div>
+
+</div>
+<div *screenSmall class="head-line-middle">
+  <div class="head-line__middle">
+    <div class="logo">
+      <img class="logo__img" src="../../../assets/images/logo.jpg">
+      <div class="logo__content">
+        <span class="logo__name">Автопрокат</span>
+        <span class="logo__info">КиевПрокатСервис</span>
+      </div>
+    </div>
+    <div class="menu-img" (click)="ShowSmallMenu()">
+      <img class="menu-img__img" src="../../../assets/images/menu.png">
+    </div>
+
+  </div>
+
+  <app-menu></app-menu>
+</div>
