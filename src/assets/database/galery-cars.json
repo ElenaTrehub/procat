@@ -1,0 +1,19 @@
+{
+  "cars":[
+    {
+      "title": "Mitsubishi outlander 2015",
+      "startPrice": 500,
+      "bigPhoto": "../../../assets/images/mitsubishi-big.jpg"
+  },
+    {
+      "title": "Hyundai Solaris 2017",
+      "startPrice": 550,
+      "bigPhoto": "../../../assets/images/solaris-big.jpg"
+    },
+    {
+      "title": "Hyundai Elantra 2018",
+      "startPrice": 550,
+      "bigPhoto": "../../../assets/images/elantra-big.jpg"
+    }
+  ]
+}

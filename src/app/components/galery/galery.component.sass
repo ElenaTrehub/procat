@@ -1,0 +1,127 @@
+@import "../../settings/variebles"
+.galery
+  max-width: 1920px
+  .galery__slides
+    width: 100%
+    position: relative
+    padding: 0px
+    margin: 0px
+    list-style-type: none
+    .galery__slide
+      position: absolute
+      font-size: 40px
+      box-sizing: border-box
+      color: #000
+      left: 0px
+      top: 0px
+      width: 100%
+      height: 100%
+      opacity: 0
+      z-index: 1
+      background-size: cover
+      background-position: calc(50% + 70px) 50%
+
+      -webkit-transition: opacity 1s
+      -moz-transition: opacity 1s
+      -o-transition: opacity 1s
+      transition: opacity 1s
+
+    .galery__slide-showing
+      opacity: 1
+      z-index: 4
+
+
+.galery-info
+  position: absolute
+  width: 100%
+  height: 560px
+  display: flex
+  justify-content: center
+  left: 0
+  top: 0
+  z-index: 20
+  .galery-info__container
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: left
+    .galery-info__title
+      color: white
+      text-transform: uppercase
+      font-family: $main-font
+      span
+        background: $main-color
+        padding: 10px
+    .galery-info__price
+      color: $main-color
+      text-transform: uppercase
+      font-family: $main-font
+
+      span
+        background: $second-color
+        padding: 10px
+.galery__buttons
+  position: absolute
+  width: 100%
+  display: flex
+  justify-content: center
+  left: 0px
+  top: 74px
+  z-index: 10
+  font-size: 0px
+
+.galery__container
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.galery__controls
+  background: $main-color
+  color: #fff
+  font-size: 24px
+  font-weight: bold
+  cursor: pointer
+  border: 2px solid #fff
+  width: 40px
+  height: 40px
+  border-radius: 20px
+
+
+
+
+.galery__controls:hover,
+.galery__controls:focus
+  background: $second-color
+  color: $main-color
+  outline: none
+  border: none
+
+
+.galery__large-height
+  height: 560px
+.galery__middle-height
+  height: 400px
+.galery__small-height
+  height: 300px
+
+
+.galery__container-large
+  width: $container-width
+.galery__container-sm
+  width: 90%
+
+
+
+.galery-info__title-large-font
+  font-size: 36px
+  margin-top: 40px
+.galery-info__title-small-font
+  font-size: 24px
+  margin-top: 20px
+
+.galery-info__price-large-font
+  font-size: 36px
+  margin-top: 25px
+.galery-info__price-small-font
+  font-size: 20px
+  margin-top: 22px

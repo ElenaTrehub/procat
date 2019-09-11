@@ -1,3 +1,26 @@
-<p>
-  galery works!
-</p>
+<div class="galery">
+  <ul class="galery__slides" id="test" [ngClass]="{'galery__large-height': screenService.isLarge(),
+  'galery__middle-height': screenService.isMiddle(), 'galery__small-height': screenService.isSmall()}">
+    <li *ngFor = "let car of cars" class="galery__slide" [ngStyle]="{'background-image':getUrl(car.bigPhoto)}">
+      <div class="galery-info">
+        <div class="galery-info__container" [ngClass]="{'galery__container-large': screenService.isLarge(),
+        'galery__container-sm': screenService.isMiddle()|| screenService.isSmall()}">
+          <div class="galery-info__title" [ngClass]="{'galery-info__title-large-font': screenService.isLarge(),
+  'galery-info__title-small-font': screenService.isMiddle()|| screenService.isSmall()}"><span>{{car.title}}</span></div>
+          <div class="galery-info__price" [ngClass]="{'galery-info__price-large-font': screenService.isLarge(),
+  'galery-info__price-small-font': screenService.isMiddle()|| screenService.isSmall()}"><span>от {{car.startPrice}} грн.</span></div>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+  <div class="galery__buttons" [ngClass]="{'galery__large-height': screenService.isLarge(),
+  'galery__middle-height': screenService.isMiddle(), 'galery__small-height': screenService.isSmall()}">
+    <div class="galery__container" [ngClass]="{'galery__container-large': screenService.isLarge(),
+        'galery__container-sm': screenService.isMiddle()||screenService.isSmall()}">
+      <button class="galery__controls" (click)="PrevSlide()">&lt;</button>
+      <button class="galery__controls" (click)="NextSlide()">&gt;</button>
+    </div>
+  </div>
+</div>
+

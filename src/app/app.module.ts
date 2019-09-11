@@ -11,6 +11,7 @@ import {ScreenLargeDirective} from './directieves/screen-large.directiev';
 import {ScreenSmallDirective} from './directieves/screen-small.directive';
 import {ScreenMiddleDirective} from './directieves/screen-middle.directive';
 import { GaleryComponent } from './components/galery/galery.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { GaleryComponent } from './components/galery/galery.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [ScreenService],
   bootstrap: [AppComponent]
