@@ -1,0 +1,108 @@
+@import "../../settings/variebles"
+.calculate
+  max-width: 1920px
+  background-image: url("../../../assets/images/cost-fon.jpg")
+  height: 400px
+  background-size: cover
+  display: flex
+  justify-content: center
+  .calculate__container
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    .calculate__title
+      text-transform: uppercase
+      font-family: $main-font
+      color: black
+      text-align: center
+      padding: 20px 0
+    .count-form
+      display: flex
+      align-items: center
+      width: 100%
+      .count-form__req
+        width: 345px
+        height: 220px
+        mat-form-field
+          width: 100%
+        .count-form__button
+          font-family: $main-font
+          text-transform: uppercase
+          font-size: 18px
+          text-align: center
+          padding: 5px
+          width: 100%
+          background: $second-color
+          font-weight: bold
+          border: none
+          color: #333
+          margin-top: 10px
+        .count-form__button:hover,
+        .count-form__button:focus
+          outline: none
+          border: none
+          cursor: pointer
+      .count-form__res
+        width: 580px
+        height: 220px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
+        background-image: url("../../../assets/images/cost-fon2.png")
+        background-repeat: repeat
+        border: 2px dotted #ff8a00
+        .count-form__cost
+          font-family: $main-font
+          font-size: 22px
+          color: black
+          text-align: center
+          padding: 30px
+        .count-form__order
+          font-family: $main-font
+          text-transform: uppercase
+          font-size: 18px
+          text-align: center
+          padding: 5px
+          width: 50%
+          background: $main-color
+          font-weight: bold
+          border: none
+          color: #ffffff
+          margin-left: 23%
+          margin-bottom: 30px
+        .count-form__chose-other-car
+          font-family: $main-font
+          text-transform: uppercase
+          font-size: 18px
+          text-align: center
+          padding: 5px
+          width: 50%
+          background: $second-color
+          font-weight: bold
+          border: none
+          color: #ffffff
+          margin-left: 23%
+          margin-bottom: 30px
+.calculate__sale-title
+  font-family: $main-font
+  font-size: 18px
+  text-align: center
+  color: #000
+  margin: 40px 0 30px 0
+.calculate__container-large
+  width: $container-width
+.calculate__container-sm
+  width: 90%
+.count-form-wrap
+  flex-wrap: wrap
+.count-form-justify-large
+  justify-content: space-between
+.count-form-justify-sm
+  justify-content: center
+
+.calculate__title-large-font
+  font-size: 24px
+.calculate__title-small-font
+  font-size: 16px

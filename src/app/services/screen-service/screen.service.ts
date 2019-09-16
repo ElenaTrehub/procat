@@ -35,7 +35,9 @@ export class ScreenService {
     return this.screenWidth < this.middlePixels;
   }
   isLarge(): boolean {
-    return this.screenWidth > this.middlePixels;
+
+    return this.screenWidth > this.largePixels;
+
   }
 
   isMiddle(): boolean{

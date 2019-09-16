@@ -1,7 +1,5 @@
 import {AfterViewChecked, AfterViewInit, Component, OnInit} from '@angular/core';
 import {CarService} from '../../services/car-service/car.service';
-import {HttpClient} from '@angular/common/http';
-import {ApiRoutes} from '../../models/ApiRoutes';
 import {DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
 import {ScreenService} from '../../services/screen-service/screen.service';
 
@@ -15,22 +13,31 @@ export class GaleryComponent implements OnInit, AfterViewChecked{
   public slides;
   public currentSlide = 0;
   trustedDashboardUrl : SafeUrl;
-  constructor(private http: HttpClient,
+  constructor(private carService: CarService,
               private sanitizer: DomSanitizer,
               private screenService: ScreenService) {
 
   }
-  carsMethod(res){
-    this.cars = res.cars ;
 
-  }
+
+
   ngOnInit() {
-    this.http.get(`${ApiRoutes.GALERY_CARS_INFO}`)
-      .subscribe(response => this.carsMethod(response) );
+    this.GetGaleryCars();
 
   }
 
+  async GetGaleryCars(){
+    const res = await this.carService.getGaleryCars();
 
+    if(res.data){
+      this.cars = res.data;
+
+    }
+    else{
+      console.log("Ошибка сервера!");
+    }
+
+  }
 
   NextSlide() {
     this.slides[this.currentSlide].className = 'galery__slide';

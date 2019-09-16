@@ -1,0 +1,28 @@
+<div class="why">
+  <div class="why__container" [ngClass]="{'why__container-large': screenService.isLarge(),
+        'why__container-sm': screenService.isMiddle()|| screenService.isSmall()}">
+    <div class="why__main-title" [ngClass]="{'why__main-title-large-font': screenService.isLarge(),
+  'why__main-title-small-font': screenService.isMiddle()|| screenService.isSmall()}">Аренда, прокат автомобиля в киеве без водителя</div>
+    <div class="reasons" >
+      <div class="reasons__title" [ngClass]="{'reasons__title-large-font': screenService.isLarge(),
+  'reasons__title-small-font': screenService.isMiddle()|| screenService.isSmall()}">Почему недорогие машины на прокат лучше заказывать у нас</div>
+      <div class="reasons__blocks" [ngClass]="{'reasons__blocks-ms': screenService.isMiddle()|| screenService.isSmall()}">
+
+        <div class="reason__block" [ngClass]="{'reason__block-lg': screenService.isLarge(), 'reason__block-ms': screenService.isMiddle()|| screenService.isSmall()}">
+            <img class="reason__block__img" src="../../../assets/images/car-icon.png">
+            <p class="reason__block__text">Большой выбор автомобилей в аренду, всегда в наличии, не старше 2014 года</p>
+        </div>
+        <div class="reason__block" [ngClass]="{'reason__block-lg': screenService.isLarge(), 'reason__block-ms': screenService.isMiddle()|| screenService.isSmall()}">
+          <img class="reason__block__img" src="../../../assets/images/phone-icon.png">
+          <p class="reason__block__text">Круглосуточная поддержка по телефонам: +3 8066 523 45 12, +3 8050 547 23 15</p>
+        </div>
+        <div class="reason__block" [ngClass]="{'reason__block-lg': screenService.isLarge(), 'reason__block-ms': screenService.isMiddle()|| screenService.isSmall()}">
+          <img class="reason__block__img" src="../../../assets/images/rub-icon.png">
+          <p class="reason__block__text">Множество способов оплаты, в том числе банковскими картами</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

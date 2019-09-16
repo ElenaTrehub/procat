@@ -12,10 +12,20 @@ export class CarService {
 
   constructor(private http: HttpClient) { }
   cars;
-  getGaleryCars() {
-
-    this.http.get(`${ApiRoutes.GALERY_CARS_INFO}`).subscribe(response => { return response });
-
-
+  static ResName(res){
+    return res;
   }
+  getGaleryCars(): Promise<ServerResponse>{
+
+    return this.http.get(`${ApiRoutes.GALERY_CARS_INFO}`).toPromise() as Promise<ServerResponse>;
+  }// getGaleryCars
+  getCarsTitle(): Promise<ServerResponse>{
+    return this.http.get(`${ApiRoutes.CARS_TITLE}`).toPromise() as Promise<ServerResponse>;
+  }// getCarsTitle
+  countCost(carTitle: number, from: Date, to: Date ){
+    console.log(carTitle, from, to);
+    return { data: 590};
+  }// countCost
+
+
 }

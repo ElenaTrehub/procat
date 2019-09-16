@@ -12,7 +12,16 @@ import {ScreenSmallDirective} from './directieves/screen-small.directive';
 import {ScreenMiddleDirective} from './directieves/screen-middle.directive';
 import { GaleryComponent } from './components/galery/galery.component';
 import {HttpClientModule} from '@angular/common/http';
-
+import { WhyComponent } from './components/why/why.component';
+import { CalculateComponent } from './components/calculate/calculate.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
+import {MatFormFieldModule, MatInputModule} from '@angular/material';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ParkComponent } from './park/park.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,12 +31,25 @@ import {HttpClientModule} from '@angular/common/http';
     ScreenLargeDirective,
     ScreenSmallDirective,
     ScreenMiddleDirective,
-    GaleryComponent
+    GaleryComponent,
+    WhyComponent,
+    CalculateComponent,
+    ParkComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    AngularDateTimePickerModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    BrowserAnimationsModule
+
   ],
   providers: [ScreenService],
   bootstrap: [AppComponent]

@@ -1,0 +1,38 @@
+<div class="calculate">
+  <div class="calculate__container" [ngClass]="{'calculate__container-large': screenService.isLarge(),
+        'calculate__container-sm': screenService.isMiddle()|| screenService.isSmall()}">
+    <div class="calculate__title" [ngClass]="{'calculate__title-large-font': screenService.isLarge(),
+        'calculate__title-small-font': screenService.isMiddle()|| screenService.isSmall()}">Рассчитать стоимость аренды автомобиля</div>
+    <div class="count-form" [ngClass]="{'count-form-justify-large': screenService.isLarge(), 'count-form-wrap count-form-justify-sm': screenService.isMiddle()|| screenService.isSmall()}">
+      <form *ngIf="!cost || screenService.isLarge()" class="count-form__req">
+        <mat-form-field>
+          <mat-label>Выберите автомобиль:</mat-label>
+          <mat-select [formControl]="selectFormControl" [(ngModel)]="selectedCar" (ngModelChange)="onChange($event)">
+            <mat-option *ngFor="let car of cars" [value]="car">{{car}}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="selectFormControl.hasError('required')">
+            <strong>Вібирите машину!</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker1" [formControl]="dateFromFormControl" [(ngModel)]="dateFrom" placeholder="с:">
+          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker2" [formControl]="dateToFormControl" [(ngModel)]="dateTo" placeholder="по:">
+          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+
+        <button class="count-form__button" (click)="countCost()">Рассчитать стоимость аренды</button>
+      </form>
+      <div *ngIf="cost" class="count-form__res">
+        <div class="count-form__cost">Стоимость аренды составит: {{cost}} грн.</div>
+        <button class="count-form__order">Сделать заказ</button>
+        <button *ngIf="!screenService.isLarge()" class="count-form__chose-other-car" (click)="choseOtherCar()">Выбрать другую машину</button>
+      </div>
+    </div>
+    <div class="calculate__sale-title">Если нашли дешевле, позвоните нам, сделаем дешевле!</div>
+  </div>
+</div>
